@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Blood_donation</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    
+
+    <!-- Header Carousel -->
+<div class="container">
+
+    
+    <%= render partial: 'header' %>
+
+    <br>
+    
+    <div class="row">
+
+            <div class="col-md-3">
+                <h3>Find a Blood Donor</h3>
+                <form name="sentMessage" id="contactForm" novalidate>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Blood Group :</label>
+                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your Blood Group.">
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Area :</label>
+                            <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter Area.">
+                        </div>
+                    </div>
+                    
+                   
+                    <div id="success"></div>
+                    <!-- For success/fail messages -->
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+                <br><br>
+                <h3>Register for a new Donor</h3>
+                
+                    
+                   
+                    <div id="success"></div>
+                    <!-- For success/fail messages -->
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+
+                
+            </div>
+
+            <div class="col-md-9">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" style="width: 800px; height:400px; margin: 0 auto">
+                        <div class="item active">
+                            <img class="img-responsive" src="https://staccatoedgracechords.files.wordpress.com/2014/06/donate_blood_1.jpg" alt="" >
+                            <div class="carousel-caption">
+                                <!-- <h2>Caption 1</h2> -->
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="http://www.prolan.hu/wp-content/uploads/2012/04/veradas2.jpg" alt="">
+                            <div class="carousel-caption">
+                                <!-- <h2>Caption 2</h2> -->
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img class="img-responsive" src="http://payload126.cargocollective.com/1/10/330231/4824312/SYSTEM_905.jpg" alt="">
+                            <div class="carousel-caption">
+                                 <!-- <h2>Caption 3</h2> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                        </span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                       </span>
+                    </a>
+                </div>
+            </div>
+
+            
+
+    </div>
+
+
+    <!-- Page Content -->
+    
+
+        <!-- Marketing Icons Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Welcome to the community of Heroes
+                </h1>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><b> Information Links</b></h4>
+                    </div>
+                    <div class="panel-body" style="min-height: 500px; max-height: 500px;overflow-y: scroll;">
+                        <p>The blood you donate gives someone another chance at life. One day that someone may be a close relative, a friend, a loved one—or even you.</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Go through the video</h3>     
+                   <iframe width="550" height="250" src="http://www.youtube.com/embed/KgMt0dtr4Vc" frameborder="10" allowfullscreen></iframe>
+
+                <br><br>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><b> Share your experience</b></h4>
+                    </div>
+                    <div class="panel-body" style="min-height: 150px; max-height: 150px;overflow-y: scroll;">
+                        <h4><b> Sachin Tanwar </b></h4>
+                        <p>KAR K DEKHO, ACCHA LAGTA HE .....!!!!</p>
+                       
+                    </div>
+                </div>
+            
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><b> News</b></h4>
+                    </div>
+                    <div class="panel-body" style="min-height: 500px; max-height: 500px;overflow-y: scroll;">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Features Section -->
+        
+        <!-- /.row -->
+
+        <hr>
+
+
+        <!-- Footer -->
+
+    <%= render partial: 'footer' %>
+        
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
+</body>
+
+</html>
