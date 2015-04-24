@@ -1,0 +1,54 @@
+
+
+        <!-- Page Content -->
+    <div class="container">
+
+        <%= render partial: 'header' %>
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Donor details</h1>
+                
+            </div>
+        </div>
+        <!-- /.row -->
+
+
+        
+		<h3>Name : <%= @donor.name %></h3>
+		<h4><p>Contact no : <%= @donor.phone_no %></p></h4>
+		<h4><p>Blood Group : <%= @donor.blood_group %></p></h4>
+		<h4><p>Area : <%= @donor.area %></p></h4>
+		<h4><p>Message : <%= @donor.message %></p></h4>
+		<br>
+
+		<h3><p class="flash"><%= flash.notice %></p><h3>
+		<h4><%= link_to "Edit your Information", edit_donor_path(@donor) %><h4>
+
+		<br>
+
+		<h3>Thank you  <b><%= @donor.name %></b> for your great support , We will not disclose your personal contact number to anyone. The contact number will not shown publically and we contact you directly when some needy request us for blood group which matches to your blood group and needy is as near as your area</h3><br>
+
+		<b>With Regards</b>
+			<h2><b>VaaYu YuVaa</b></h2><br>
+
+		<h4><%= link_to "<< Back to Home", donors_path %></h4>
+
+        
+        
+
+        <hr>
+
+        <!-- Footer -->
+        <%= render partial: 'footer' %>
+        
+    </div>
+    <!-- /.container -->
+
+
+
+
+
+
+

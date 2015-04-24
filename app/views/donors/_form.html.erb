@@ -1,0 +1,89 @@
+<div class="row">
+
+	<div class="col-md-4 text-center">
+		<div class="panel panel-primary boxShadow" style=" font-size:16px" >
+
+            <div class="panel-heading">
+                <h3 class="panel-title"><b>Benefits of Blood Donation</b></h3>
+            </div>
+
+            <div class="panel-body" align="left" style="min-height: 500px; max-height: 500px; overflow-y: scroll;">
+
+
+            
+                   
+			                                             
+            </div>
+            
+
+        </div>
+
+	</div>
+
+
+	<div class="col-md-4 text-center">
+
+        <div class="panel panel-primary boxShadow" style=" font-size:16px">
+
+            <div class="panel-heading">
+                <h3 class="panel-title"><b>Register a new Donor</b></h3>
+            </div>
+
+            <div class="panel-body" align="left" style="min-height: 500px; max-height: 500px;">
+
+
+            <%= bootstrap_form_for(@donor) do |f| %>
+
+            	<ul>
+				  <% @donor.errors.full_messages.each do |error| %>
+				    <li><%= error %></li>
+				  <% end %>
+				</ul>
+
+				  <%= f.text_field :name, label: "Full Name", placeholder: "Sachin Tanwar", required: "required" %>
+                  
+                  <%= f.select :blood_group, options_for_select(%w[ A+ B+ O+ AB+ A- B- O- AB-]) %>
+                  
+                  <%= f.select :area, options_for_select(%w[Indore Vijay_Nagar Bhawar_Kuwa Rajendra_Nagar Geeta_Bhawan Aerodram Tejaji_Nagar Raj_Mohalla Rajwada Chandan_Nagar Gandhi_Nagar Arvindo MY]) %>
+
+                  <%= f.phone_field :phone_no , required: "required" ,maxlength: "10"  %>
+
+                  <%= f.text_area :message , placeholder: "Leave a message.... (Not more than 50 words)"%>
+                  
+                  <%= f.submit "Register" , class: "btn btn-primary"%>
+            <% end %>
+
+
+            
+                   
+			                                             
+            </div>
+            
+
+        </div>
+                            
+    </div>
+
+    <div class="col-md-4 text-center">
+    	<div class="panel panel-primary boxShadow" style=" font-size:16px">
+
+            <div class="panel-heading">
+                <h3 class="panel-title"><b>Facts related to Blood Donation</b></h3>
+            </div>
+
+            <div class="panel-body" align="left" style="min-height: 500px; max-height: 500px; overflow-y: scroll;">
+
+
+            
+                   
+			                                             
+            </div>
+            
+
+        </div>
+		
+	</div>
+
+	
+
+</div>

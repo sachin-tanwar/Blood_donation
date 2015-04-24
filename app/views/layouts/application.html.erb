@@ -1,12 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>BloodDonation</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+
+  <title>Blood_donation</title>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %> 
+  <%= stylesheet_link_tag    :all  %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <%= javascript_include_tag :all%>
   <%= csrf_meta_tags %>
+  
 </head>
+
 <body>
+
+
+
+
 
 <%= yield %>
 

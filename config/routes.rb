@@ -1,12 +1,17 @@
-
 Rails.application.routes.draw do
 
-  get 'pages/index'
-  #root 'pages#index'
-  get 'pages/about'
-  get 'pages/achievements'
-  get 'pages/contact'
+  root to: 'donors#index'
 
+  resources :donors
+  
+
+  get 'donors/about' , :to => redirect('/about.html.erb')
+  #get 'donors/about'
+  get 'donors/achievements'
+  get 'donors/contact'
+  get 'donors/gallery'
+  get 'donors/bloodbanks'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
