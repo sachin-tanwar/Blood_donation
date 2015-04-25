@@ -34,21 +34,7 @@ class DonorsController < ApplicationController
 		redirect_to donor_path(@donor)
 	end
 
-	def about
-	end
-
-	def contact
-    end
-
-	def achievements
-    end
-
-    def bloodbanks
-    end
-
-    def gallery
-    end
-
+	
 
 
 end

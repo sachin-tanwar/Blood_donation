@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :donors
   
 
-  get 'donors/about' , :to => redirect('/about.html.erb')
+  get 'donors/about'
   #get 'donors/about'
   get 'donors/achievements'
   get 'donors/contact'
