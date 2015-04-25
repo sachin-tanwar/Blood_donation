@@ -20,13 +20,17 @@
 
                 <div class="panel-body" align="left" style="min-height: 220px; max-height: 200px;">
 
-                <%= bootstrap_form_for(@donor) do |f| %>
+                <%= form_tag donors_path , method: 'get' do %>
                   
-                  <%= f.select :blood_group, options_for_select(%w[ A+ B+ O+ AB+ A- B- O- AB-]) %>
+                 <p> <%= label_tag :blood_group %><br />
+                  <%= select_tag (:search), options_for_select(%w[ A+ B+ O+ AB+ A- B- O- AB-])%> </p>
+                  <!-- f.select :blood_group, options_for_select(%w[ A+ B+ O+ AB+ A- B- O- AB-]) -->
                   
-                  <%= f.select :area, options_for_select(%w[Indore Vijay_Nagar Bhawar_Kuwa Rajendra_Nagar Geeta_Bhawan Aerodram Tejaji_Nagar Raj_Mohalla Rajwada Chandan_Nagar Gandhi_Nagar Arvindo MY]) %>
+                  <p> <%= label_tag :area %><br />
+                  <%= select_tag (:search), options_for_select(%w[Indore Vijay_Nagar Bhawar_Kuwa Rajendra_Nagar Geeta_Bhawan Aerodram Tejaji_Nagar Raj_Mohalla Rajwada Chandan_Nagar Gandhi_Nagar Arvindo MY Bombay_Hospital])%> </p> 
                   
-                  <%= f.submit "Search" , class: "btn btn-primary"%>
+                  
+                  <%= submit_tag "Search" , class: "btn btn-primary"%>
                 <% end %>
 
                 
@@ -202,15 +206,12 @@
 
 <h1>All Donors</h1>
 
-<ul id="donors">
-  <% @donors.each do |donor| %>
+<% for donor in @donors %>
+
     <li>
-      <%= link_to donor.name , donor_path(donor) , class: 'donor_name', id: "donor_#{donor.id}" %>
-
+        <%= link_to donor.name , donor_path(donor) , class: 'donor_name', id: "donor_#{donor.id}" %>
     </li>
-  <% end %>
-</ul>
 
-<%= link_to "Register for a new Donor", new_donor_path, class: "new_donor" %>
+<% end %>
 
 

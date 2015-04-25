@@ -3,9 +3,12 @@ class DonorsController < ApplicationController
 	include DonorsHelper
 
 	def index
-		@donor= Donor.new
-		@donors = Donor.all
-	end
+		 #@donor= Donor.new
+		 @donors = Donor.all
+		#@donors = Donor.where(blood_group: 'A+', area: 'Indore')
+
+		#@donors = Donor.search(params[:search])
+	end	
 
 	def show
 		@donor = Donor.find(params[:id])
@@ -34,7 +37,9 @@ class DonorsController < ApplicationController
 		redirect_to donor_path(@donor)
 	end
 
-	
+	# def find
+	# 	Donor.find_by blood_group: 'B+'
+	# end
 
 
 end

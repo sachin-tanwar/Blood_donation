@@ -1,0 +1,20 @@
+<%= bootstrap_form_for(@donor) do |f| %>
+                  
+                  <%= f.select :blood_group, options_for_select(%w[ A+ B+ O+ AB+ A- B- O- AB-]) %>
+                  
+                  <%= f.select :area, options_for_select(%w[Indore Vijay_Nagar Bhawar_Kuwa Rajendra_Nagar Geeta_Bhawan Aerodram Tejaji_Nagar Raj_Mohalla Rajwada Chandan_Nagar Gandhi_Nagar Arvindo MY]) %>
+                  
+                  <%= f.submit "Search" , class: "btn btn-primary"%>
+                <% end %>
+
+
+<ul id="donors">
+  <% @donors.each do |donor| %>
+    <li>
+      <%= link_to donor.name , donor_path(donor) , class: 'donor_name', id: "donor_#{donor.id}" %>
+
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Register for a new Donor", new_donor_path, class: "new_donor" %>
