@@ -5,7 +5,9 @@ class CreateDonors < ActiveRecord::Migration
     	t.string :blood_group
     	t.string :area
     	t.string :phone_no
-		t.text :message
+      t.string :phone_no2
+		  t.text :message
+      t.text :address
 
       t.timestamps null: false
     end
