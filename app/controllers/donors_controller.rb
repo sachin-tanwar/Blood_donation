@@ -4,10 +4,10 @@ class DonorsController < ApplicationController
 
 	def index
 		 #@donor= Donor.new
-		 @donors = Donor.all
+		# @donors = Donor.all
 		#@donors = Donor.where(blood_group: 'A+', area: 'Indore')
-
 		#@donors = Donor.search(params[:search])
+		
 	end	
 
 	def show
@@ -17,6 +17,11 @@ class DonorsController < ApplicationController
 	def new
 		@donor = Donor.new
 	end
+
+	# def search
+	# 	#@results=Donor.search(params[:search])
+	# 	@donors = Donor.where(blood_group: 'A+', area: 'Indore')
+	# end	
 
 	def create
 		@donor = Donor.new(donor_params)
@@ -37,9 +42,15 @@ class DonorsController < ApplicationController
 		redirect_to donor_path(@donor)
 	end
 
-	# def find
-	# 	Donor.find_by blood_group: 'B+'
-	# end
+	 def find
+	 	@donors = Donor.search(params[:search])
+		#@donors = Donor.where(blood_group: 'B+')
+		#redirect_to donors_find_path(@donors)
+	 end
+
+	 def show_find
+	 	@donor = Donor.find(params[:id])
+	 end
 
 
 end

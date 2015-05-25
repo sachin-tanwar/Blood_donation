@@ -7,7 +7,7 @@
                 <h3 class="panel-title"><b>Benefits of Blood Donation</b></h3>
             </div>
 
-            <div class="panel-body" align="left" style="min-height: 500px; max-height: 500px; overflow-y: scroll;">
+            <div class="panel-body" align="left" style="min-height: 700px; max-height: 700px; overflow-y: scroll;">
 
 
             
@@ -46,9 +46,9 @@
                   
                   <%= f.select :area, options_for_select(%w[Indore Vijay_Nagar Bhawar_Kuwa Rajendra_Nagar Geeta_Bhawan Aerodram Tejaji_Nagar Raj_Mohalla Rajwada Chandan_Nagar Gandhi_Nagar Arvindo MY]) %>
 
-                  <%= f.phone_field :phone_no , label: "Phone Number1 (required)", required: "required" ,maxlength: "10"  %>
+                  <%= f.phone_field :phone_no , label: "Phone Number1 (required)", placeholder: "9988776655 (10 digits only)", required: "required" ,maxlength: "10"  %>
 
-                  <%= f.phone_field :phone_no2 , label: "Phone Number2 (optional)" ,maxlength: "10"  %>
+                  <%= f.phone_field :phone_no2 , label: "Phone Number2 (optional)", placeholder: "9998887777 (10 digits only)" ,maxlength: "10"  %>
 
                   <%= f.text_area :address , placeholder: "18/19 Tulsiram nagar, Indore"%>
                   
@@ -76,7 +76,7 @@
                 <h3 class="panel-title"><b>Facts related to Blood Donation</b></h3>
             </div>
 
-            <div class="panel-body" align="left" style="min-height: 500px; max-height: 500px; overflow-y: scroll;">
+            <div class="panel-body" align="left" style="min-height: 700px; max-height: 700px; overflow-y: scroll;">
 
 
             

@@ -1,0 +1,12 @@
+<h1> Search Results <h1>
+
+	
+<h1>All Donors</h1>
+
+<% for donor in @donors %>
+
+    <li>
+        <%= link_to donor.name , donor_path(donor) , class: 'donor_name', id: "donor_#{donor.id}" %>
+    </li>
+
+<% end %>

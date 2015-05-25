@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   resources :donors
   
-  get 'donors/find'
+  get 'find' => 'donors#find'
+  
+
   # get 'donors/about'
   # #get 'donors/about'
   # get 'donors/achievements'
